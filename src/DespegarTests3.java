@@ -18,23 +18,25 @@ driver.manage().window().maximize();
 WebElement Cookies = driver.findElement(By.xpath("//a[@class='lgpd-banner--button eva-3-btn -white -md']"));
 Cookies.click();
 
-WebElement BtonAlojamientos= driver.findElement(By.xpath("/html/body/nav/div[2]/div/div[3]/ul/li[1]/a/div"));
+WebElement BtonAlojamientos= driver.findElement(By.xpath("//ul[@class='header-list-products']//a[@class='shifu-3-button-circle HOTELS paint-circle ']"));
 Assert.assertTrue(BtonAlojamientos.isDisplayed());
 BtonAlojamientos.click();
 
-WebElement IngresaDestino = driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-box-hotels\"]/div/div/div[2]/div[1]/div/div/div/input"));
+WebElement IngresaDestino = driver.findElement(By.xpath("//div[@class='sbox-places-destination--1xd0k']//div[@class='input-container']//input[@class='input-tag']"));
 Assert.assertTrue(IngresaDestino.isDisplayed()); 
-IngresaDestino.sendKeys("Mendoza, Mendoza, Argentina");
+Thread.sleep(2000);
+IngresaDestino.sendKeys("san rafael, mendoza");
 Thread.sleep(2000);
 IngresaDestino.sendKeys(Keys.CONTROL);
 IngresaDestino.sendKeys(Keys.ENTER);
 
 List<WebElement> Lista = driver.findElements(By.xpath("//div[@class='ac-container']//div[@class='ac-group-container'][1]//ul[@class='ac-group-items']//span[@class='item-text']"));
+Thread.sleep(3000);
 WebElement Lugar = Lista.get(0);
-Thread.sleep(5000);
-Lugar.click();
+Thread.sleep(3000);
+Lugar.click(); 
 
-WebElement SeleccionFecha = driver.findElement(By.xpath("//*[@id=\"searchbox-sbox-box-hotels\"]/div/div/div[2]/div[2]/div/div[1]/div/div/div"));
+WebElement SeleccionFecha = driver.findElement(By.xpath("//input[@placeholder='Entrada']"));
 Assert.assertTrue(SeleccionFecha.isDisplayed()); 
 SeleccionFecha.click();
 
@@ -79,6 +81,9 @@ WebElement Buscar = driver.findElement(By.xpath("//button[@class='sbox5-box-butt
 Thread.sleep(1000);
 Buscar.click();
 
-driver.close();
+WebElement  UltimaValidacion= driver.findElement(By.xpath("//a[@class='accommodation-name -eva-3-ellipsis']"));
+Assert.assertTrue(UltimaValidacion.isDisplayed());
+
+//driver.close();
 }
 }
