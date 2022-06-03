@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 /*import org.openqa.selenium.chrome.ChromeDriver;*/
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -21,6 +23,7 @@ WebDriver driver = new FirefoxDriver();
 driver.get("https://www.despegar.com.ar/");
 
 driver.manage().window().maximize();
+WebDriverWait wait = new WebDriverWait(driver, 10);
 
 WebElement Cookies = driver.findElement(By.xpath("//a[@class='lgpd-banner--button eva-3-btn -white -md']"));
 Cookies.click();
@@ -49,15 +52,15 @@ Assert.assertTrue(SeleccionFecha.isDisplayed());
 SeleccionFecha.click();
 
 WebElement seleccionarFechaEntrada = driver.findElement(By.xpath("//div[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//div[@class='calendar-container ']//div [@class='sbox5-monthgrid sbox5-compact-view']//div[@class='sbox5-monthgrid-datenumber -weekday']"));
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(seleccionarFechaEntrada));
 seleccionarFechaEntrada.click();
 
 WebElement seleccionarFechaSalida = driver.findElement(By.xpath("//div[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//div[@class='calendar-container ']//div [@class='sbox5-monthgrid sbox5-compact-view']//div[@class='sbox5-monthgrid-datenumber -weekday']"));
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(seleccionarFechaSalida));
 seleccionarFechaSalida.click();
 
 WebElement Aplicar = driver.findElement(By.xpath("//div[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//div[@class='calendar-footer-cta-container']/button[@class='sbox5-3-btn -primary -md']"));
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(Aplicar));
 Aplicar.click();
 
 
@@ -66,7 +69,7 @@ SeleccionHabitacion.click();
 
 List<WebElement> Adultos = driver.findElements(By.xpath("//div[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//div[@class='stepper__room__row']//div[@class='sbox5-3-steppers -md']/button[@class='steppers-icon-right stepper__icon']"));
 WebElement  MasAdultos = Adultos.get(0);
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(MasAdultos));
 MasAdultos.click(); 
 
 
@@ -76,17 +79,17 @@ Thread.sleep(1000);
 MasMenores.click(); 
 
 WebElement edadMenor = driver.findElement(By.xpath("//div[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//div[@class='stepper__room__row']//div[@class='select__row__options__container']//div[@class='select-container']//option[@value='14']"));
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(MasMenores));
 edadMenor.click();  
 
 
 WebElement SeleccionAplica = driver.findElement(By.xpath("//div[@class='sbox5-floating-tooltip sbox5-floating-tooltip-opened']//div[@class='stepper__room__footer ']/a[@class='sbox5-3-btn -md -primary']"));
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(SeleccionAplica));
 SeleccionAplica.click();
 
 
 WebElement Buscar = driver.findElement(By.xpath("//button[@class='sbox5-box-button-ovr sbox5-3-btn -secondary -icon -lg']"));
-Thread.sleep(1000);
+wait.until(ExpectedConditions.elementToBeClickable(Buscar));
 Buscar.click();
 
 WebElement  UltimaValidacion= driver.findElement(By.xpath("//div[@class='header-products-container']//a[@class='shifu-3-button-circle FLIGHTS paint-circle ']"));
