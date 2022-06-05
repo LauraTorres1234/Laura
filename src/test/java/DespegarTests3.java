@@ -5,26 +5,28 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 /*import org.openqa.selenium.chrome.ChromeDriver;*/
-import org.openqa.selenium.firefox.FirefoxDriver;
+/*import org.openqa.selenium.firefox.FirefoxDriver;*/
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.selenium.driver.DriverFactory;
 
 
-public class DespegarTests3 { 
+
+public class DespegarTests3 extends DriverFactory { 
 
 @Test(description = "TareaDos")
-public void ValidarBusquedaWikipedia() throws Exception { System.setProperty("webdriver.gecko.driver", "C:\\Drivers\\geckodriver-win32\\geckodriver.exe");
-WebDriver driver = new FirefoxDriver();
-/*	System.setProperty ( 	("webdriver.chrome.driver", "C:\\Drivers\\chromedriver_win32\\chromedriver.exe"); */
+public void ValidarBusquedaWikipedia() throws Exception { 
+//System.setProperty("webdriver.gecko.driver", "C:\\Drivers\\geckodriver-win32\\geckodriver.exe");
+//	System.setProperty ( 	("webdriver.chrome.driver", "C:\\Drivers\\chromedriver_win32\\chromedriver.exe"); */
+WebDriver driver = null; //new FirefoxDriver();
+driver = LevantarBrowser(driver,"FIREFOX","https://www.despegar.com.ar/");
+//driver.get("https://www.despegar.com.ar/");
 
-driver.get("https://www.despegar.com.ar/");
-
-driver.manage().window().maximize();
+//driver.manage().window().maximize();
 WebDriverWait wait = new WebDriverWait(driver, 10);
-
 WebElement Cookies = driver.findElement(By.xpath("//a[@class='lgpd-banner--button eva-3-btn -white -md']"));
 Cookies.click();
 
