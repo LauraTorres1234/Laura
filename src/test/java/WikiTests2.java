@@ -22,7 +22,16 @@ Assert.assertTrue(Leer.isDisplayed());
 Leer.click();
 WebElement validarTitulo = driver.findElement(By.id("firstHeading"));
 Assert.assertTrue(validarTitulo.isDisplayed());
-driver.close();
+//driver.close();
 }
 }
+
+
+
+
+
+
+
+
+
 

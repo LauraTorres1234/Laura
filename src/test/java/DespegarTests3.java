@@ -24,7 +24,6 @@ public void ValidarBusquedaWikipedia() throws Exception {
 WebDriver driver = null; //new FirefoxDriver();
 driver = LevantarBrowser(driver,"FIREFOX","https://www.despegar.com.ar/");
 //driver.get("https://www.despegar.com.ar/");
-
 //driver.manage().window().maximize();
 WebDriverWait wait = new WebDriverWait(driver, 10);
 WebElement Cookies = driver.findElement(By.xpath("//a[@class='lgpd-banner--button eva-3-btn -white -md']"));
@@ -99,4 +98,10 @@ Assert.assertTrue(UltimaValidacion.isDisplayed());
 
 driver.close();
 }
+
 }
+
+
+
+
+

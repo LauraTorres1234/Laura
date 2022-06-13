@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite2">
+ <parameter name="suite" value= "CHROME"></parameter>
+  <test thread-count="5" name="C:/Usuarios/admin/eclipse-workplace/test">
+    <classes>
+      <class name=".WikiTests22"/>
+      <class name=".WikiTests11"/>
+      <class name=".WikiTests2"/>
+      <class name=".WikiTests1"/>
+      <class name=".DespegarTests33"/>
+      <class name=".DespegarTests3"/>
+    </classes>
+  </test> <!-- Test2 -->
+</suite> <!-- Suite -->

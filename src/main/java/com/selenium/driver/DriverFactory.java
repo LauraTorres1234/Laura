@@ -3,10 +3,16 @@ package com.selenium.driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import org.testng.Reporter;
 
+
 public class DriverFactory { 
-	 
+	
+
+	
+	
+	
 	private enum browsers {CHROME, 	FIREFOX};
 	
     public static WebDriver LevantarBrowser(WebDriver driver, String browserName, String URL) {

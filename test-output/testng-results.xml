@@ -1,23 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Abro Browser]]>
     </line>
+    <line>
+      <![CDATA[Abro Browser]]>
+    </line>
+    <line>
+      <![CDATA[Abro Browser]]>
+    </line>
+    <line>
+      <![CDATA[Abro Browser]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-06-04T21:09:08 ART" name="Default suite" finished-at="2022-06-04T21:09:21 ART" duration-ms="12580">
+  <suite started-at="2022-06-13T10:17:00 ART" name="Suite" finished-at="2022-06-13T10:17:44 ART" duration-ms="43829">
     <groups>
+      <group name="grupo1">
+        <method signature="WikiTests11.ValidarBusquedaWikipedia(java.lang.String)[pri:0, instance:com.selenium.test.WikiTests11@62ddbd7e]" name="ValidarBusquedaWikipedia" class="com.selenium.test.WikiTests11"/>
+      </group> <!-- grupo1 -->
+      <group name="grupo2">
+        <method signature="DespegarTests33.Despegar(java.lang.String)[pri:0, instance:com.selenium.test.DespegarTests33@217ed35e]" name="Despegar" class="com.selenium.test.DespegarTests33"/>
+      </group> <!-- grupo2 -->
+      <group name="grupo3">
+        <method signature="WikiTests22.ValidarBusquedaWikipedia()[pri:0, instance:com.selenium.test.WikiTests22@74e52ef6]" name="ValidarBusquedaWikipedia" class="com.selenium.test.WikiTests22"/>
+      </group> <!-- grupo3 -->
     </groups>
-    <test started-at="2022-06-04T21:09:08 ART" name="Default test" finished-at="2022-06-04T21:09:21 ART" duration-ms="12580">
-      <class name="WikiTests1">
-        <test-method signature="ValidarBusquedaWikipedia()[pri:0, instance:WikiTests1@344b8190]" started-at="2022-06-04T21:09:09 ART" name="ValidarBusquedaWikipedia" description="Validar que las busquedas en Wikipedia funcionan" finished-at="2022-06-04T21:09:21 ART" duration-ms="12435" status="PASS">
+    <test started-at="2022-06-13T10:17:00 ART" name="C:/Usuarios/admin/eclipse-workplace/test/src/test/java/com/selenium/test" finished-at="2022-06-13T10:17:44 ART" duration-ms="43829">
+      <class name="com.selenium.test.DespegarTests33">
+        <test-method signature="Despegar(java.lang.String)[pri:0, instance:com.selenium.test.DespegarTests33@217ed35e]" started-at="2022-06-13T10:17:01 ART" name="Despegar" description="Despegar" data-provider="ciudades" finished-at="2022-06-13T10:17:01 ART" duration-ms="53" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[san rafael, mendoza]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:96)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:72)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:46)
+at test.DespegarHomePage.<init>(DespegarHomePage.java:52)
+at com.selenium.test.DespegarTests33.Despegar(DespegarTests33.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Despegar -->
+        <test-method signature="Despegar(java.lang.String)[pri:0, instance:com.selenium.test.DespegarTests33@217ed35e]" started-at="2022-06-13T10:17:01 ART" name="Despegar" description="Despegar" data-provider="ciudades" finished-at="2022-06-13T10:17:01 ART" duration-ms="8" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mar del Plata]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:96)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:72)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:46)
+at test.DespegarHomePage.<init>(DespegarHomePage.java:52)
+at com.selenium.test.DespegarTests33.Despegar(DespegarTests33.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Despegar -->
+        <test-method signature="Despegar(java.lang.String)[pri:0, instance:com.selenium.test.DespegarTests33@217ed35e]" started-at="2022-06-13T10:17:01 ART" name="Despegar" description="Despegar" data-provider="ciudades" finished-at="2022-06-13T10:17:01 ART" duration-ms="4" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[San Salvador de jujuy]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:96)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:72)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:46)
+at test.DespegarHomePage.<init>(DespegarHomePage.java:52)
+at com.selenium.test.DespegarTests33.Despegar(DespegarTests33.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Despegar -->
+      </class> <!-- com.selenium.test.DespegarTests33 -->
+      <class name="com.selenium.test.WikiTests22">
+        <test-method signature="ValidarBusquedaWikipedia()[pri:0, instance:com.selenium.test.WikiTests22@74e52ef6]" started-at="2022-06-13T10:17:35 ART" name="ValidarBusquedaWikipedia" description="WikiTests" finished-at="2022-06-13T10:17:44 ART" duration-ms="9308" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Abro Browser]]>
             </line>
           </reporter-output>
         </test-method> <!-- ValidarBusquedaWikipedia -->
-      </class> <!-- WikiTests1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.selenium.test.WikiTests22 -->
+      <class name="com.selenium.test.WikiTests11">
+        <test-method signature="ValidarBusquedaWikipedia(java.lang.String)[pri:0, instance:com.selenium.test.WikiTests11@62ddbd7e]" started-at="2022-06-13T10:17:01 ART" name="ValidarBusquedaWikipedia" description="Validar que las busquedas en Wikipedia funcionan" data-provider="Data Provider Wiki" finished-at="2022-06-13T10:17:15 ART" duration-ms="14764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Selenium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Abro Browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ValidarBusquedaWikipedia -->
+        <test-method signature="ValidarBusquedaWikipedia(java.lang.String)[pri:0, instance:com.selenium.test.WikiTests11@62ddbd7e]" started-at="2022-06-13T10:17:15 ART" name="ValidarBusquedaWikipedia" description="Validar que las busquedas en Wikipedia funcionan" data-provider="Data Provider Wiki" finished-at="2022-06-13T10:17:25 ART" duration-ms="9405" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Java]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Abro Browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ValidarBusquedaWikipedia -->
+        <test-method signature="ValidarBusquedaWikipedia(java.lang.String)[pri:0, instance:com.selenium.test.WikiTests11@62ddbd7e]" started-at="2022-06-13T10:17:25 ART" name="ValidarBusquedaWikipedia" description="Validar que las busquedas en Wikipedia funcionan" data-provider="Data Provider Wiki" finished-at="2022-06-13T10:17:35 ART" duration-ms="10197" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestNG]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Abro Browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ValidarBusquedaWikipedia -->
+      </class> <!-- com.selenium.test.WikiTests11 -->
+    </test> <!-- C:/Usuarios/admin/eclipse-workplace/test/src/test/java/com/selenium/test -->
+  </suite> <!-- Suite -->
 </testng-results>

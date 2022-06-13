@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WikiTests2">
+      <class name="com.selenium.test.DespegarTests33">
         <methods>
-          <include name="ValidarBusquedaWikipedia"/>
+          <include name="Despegar" invocation-numbers="0"/>
+          <include name="endSetup"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- WikiTests2 -->
+      </class> <!-- com.selenium.test.DespegarTests33 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
